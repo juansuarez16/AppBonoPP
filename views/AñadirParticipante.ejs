@@ -1,0 +1,98 @@
+<% include partials/headers.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-2">
+<label for="">Tipo de Afiliado</label>
+
+                </div>
+                    <div class="form-group col-md-4">
+                            <%if (tablaPersona){%>
+                                <select name="tipodepersona"  class="form-control">
+                                        <option value="0"> Seleccione</option>
+                                        <% for(var i=0 ;i < tablaPersona.length;i++){%>
+        
+                                        <option id="<%=tablaPersona[i].Id_TipodePersona%>"
+                                                value="<%=tablaPersona[i].Id_TipodePersona%>">
+                                                <%=tablaPersona[i].TipodePersona%>
+                                        </option>
+        
+                                        <%}%>
+                                
+                
+                                                            
+                        </select>
+                
+                                <%}%>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                                <label for="">Tipo de Documento</label>
+                                                
+                                                                </div>
+                    <div class="form-group col-md-4">
+                            <%if (tablaDocumentos){%>
+                                <select name="tipodedocumento" class="form-control"  id="tipodedocumento" >
+                               <option value="0"> Seleccione</option>
+                                        <% for(var i=0 ;i < tablaDocumentos.length;i++){%>
+                          
+                                        <option id="<%=tablaDocumentos[i].Id_TipodeDocumento%>"
+                                                value="<%=tablaDocumentos[i].Id_TipodeDocumento%>">
+                                                <%=tablaDocumentos[i].TipodeDocumento%>
+                                        </option>
+                          
+                                        <%}%>
+                          
+                          
+                                    
+                          </select>
+                          
+                          <%}%>
+                          
+                        </div>
+                        
+                <div class="form-group col-md-4">
+                    <input type="text" name="NumerodeDocumento" id="NumerodeDocumento"   placeholder="C.C" class="form-control" required > 
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" name="Nombre1" placeholder="Primer Nombre" class="form-control" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" name="Nombre2"  placeholder="Segundo Nombre" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" name="Apellido1" placeholder="Primer Apellido" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Apellido2" placeholder="PSegundo Apellido" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Telefono1" placeholder="Telefono1" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Telefono2" placeholder="Telefono2" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Celular1" placeholder="Celular1" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Celular2" placeholder="Celular2" class="form-control" required>
+                </div>
+               
+                
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>Documento</b></label><br>
+                    <input type="file" name="Archivo" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Agregar Participante</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
