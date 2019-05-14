@@ -1,0 +1,19 @@
+{
+  "name": "appbonopp",
+  "version": "1.0.0",
+  "description": "Formulario de inscripcion bono pp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juan manuel suarez guzman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "mysql": "^2.17.1",
+    "req-flash": "0.0.3"
+  }
+}
